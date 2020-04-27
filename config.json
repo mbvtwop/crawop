@@ -1,6 +1,6 @@
 {
-  "domain": "woptimo.com/agence-woptimo/",
-  "startUrl": "https://woptimo.com/",
+  "domain": "woptimo.com",
+  "startUrl": "https://woptimo.com/agence-woptimo/",
   "projectId": "crawlergcp",
   "bigQuery": {
     "datasetId": "woptimo_agence",
