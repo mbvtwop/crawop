@@ -1,0 +1,23 @@
+#!/usr/bin/env bash                                                                                                                                                                                                                             
+
+bucket='gs://crawl-test-woptimo/config.json'
+
+set -v
+
+curl -sL https://deb.nodesource.com/setup_11.x | bash -
+apt-get update && apt-get install -yq git libgconf-2-4 nodejs
+apt-get update && apt-get install -y wget --no-install-recommends
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+
+apt-get update && apt-get install -y google-chrome-unstable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst ttf-freefont --no-install-recommends
+
+git clone https://github.com/mbvtwop/crawop.git
+
+cd crawler_woptimo
+sudo npm install
+gsutil cp ${bucket} .
+node index.js
+
+shutdown -h now
