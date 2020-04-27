@@ -15,7 +15,7 @@ apt-get update && apt-get install -y google-chrome-unstable fonts-ipafont-gothic
 
 git clone https://github.com/mbvtwop/crawop.git
 
-cd crawler_woptimo
+cd crawop
 sudo npm install
 gsutil cp ${bucket} .
 node index.js
