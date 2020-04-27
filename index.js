@@ -67,7 +67,7 @@ async function writeToBigQuery(result) {
     footer_title: result.result.footerTitle,
     twitter_title: result.result.twitterTitle,
     //ns_gtm: result.result.nsGtm,
-    h1_title: result.result.h1Title,
+    h1_title: result.result.h1Title
     //canonical_tag: result.result.canonicalTag
   };
 
