@@ -65,9 +65,9 @@ async function writeToBigQuery(result) {
     document_title: result.result.title,
     meta_description: result.result.metaDescription,
     footer_title: result.result.footerTitle,
-    twitter_title: result.result.twitterTitle,
+    twitter_title: result.result.twitterTitle
     //ns_gtm: result.result.nsGtm,
-    h1_title: result.result.h1Title
+    //h1_title: result.result.h1Title
     //canonical_tag: result.result.canonicalTag
   };
 
@@ -144,10 +144,10 @@ function evaluatePage() {
   return {
     title: $('title').text(),
     metaDescription: $('meta[name="description"]').attr('content'),
-    footerTitle: document.querySelector("#footer > div.container > div > div:nth-child(1) > div").innerText,
-    twitterTitle: $('meta[name="twitter:title"]').attr('content'),
+    footerTitle: document.querySelector('#footer > div.container > div > div:nth-child(1) > div').innerText,
+    twitterTitle: $('meta[name="twitter:title"]').attr('content')
     //nsGtm: document.querySelector('body > noscript').innerText,
-    h1Title: document.getElementsByTagName("h1")[0].innerText
+    //h1Title: document.getElementsByTagName("h1")[0].innerText
     //canonicalTag: $('link[rel="canonical"]').attr('href')
   };
 }

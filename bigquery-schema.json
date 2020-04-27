@@ -48,10 +48,5 @@
     "description": "Title twitter.",
     "name": "twitter_title",
     "type": "STRING"
-  },
-  {
-    "description": "Title H1.",
-    "name": "h1_title",
-    "type": "STRING"
   }
 ]
