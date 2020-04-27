@@ -1,3 +1,4 @@
+ 
 /**
  * MIT License
  *
@@ -65,10 +66,9 @@ async function writeToBigQuery(result) {
     document_title: result.result.title,
     meta_description: result.result.metaDescription,
     footer_title: result.result.footerTitle,
-    twitter_title: result.result.twitterTitle
-    //ns_gtm: result.result.nsGtm,
-    //h1_title: result.result.h1Title
-    //canonical_tag: result.result.canonicalTag
+    twitter_title: result.result.twitterTitle,
+    ns_gtm: result.result.nsGtm,
+    h1_title: result.result.h1Title
   };
 
   await bigquery
@@ -144,11 +144,10 @@ function evaluatePage() {
   return {
     title: $('title').text(),
     metaDescription: $('meta[name="description"]').attr('content'),
-    footerTitle: document.querySelector('#footer > div.container > div > div:nth-child(1) > div').innerText,
-    twitterTitle: $('meta[name="twitter:title"]').attr('content')
-    //nsGtm: document.querySelector('body > noscript').innerText,
-    //h1Title: document.getElementsByTagName("h1")[0].innerText
-    //canonicalTag: $('link[rel="canonical"]').attr('href')
+    footerTitle: document.querySelector("#footer > div.container > div > div:nth-child(1) > div").innerText,
+    twitterTitle: $('meta[name="twitter:title"]').attr('content'),
+    nsGtm: document.querySelector('body > noscript').innerText,
+    h1Title: document.getElementsByTagName("h1")[0].innerText
   };
 }
 
@@ -185,7 +184,7 @@ async function launchCrawler() {
     console.log(`Crawl took ${finish - start} milliseconds.`);
     console.log(`Crawled ${count} files.`);
     await crawler.close();
-  } catch(e) {
+  } catch(e) {
     console.error(e);
   }
 }
@@ -230,3 +229,15 @@ function init() {
     console.error(e);
   }
 })();
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About

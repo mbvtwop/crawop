@@ -48,5 +48,15 @@
     "description": "Title twitter.",
     "name": "twitter_title",
     "type": "STRING"
+  },
+  {
+    "description": "Noscript GTM.",
+    "name": "ns_gtm",
+    "type": "STRING"
+  },
+  {
+    "description": "Title H1.",
+    "name": "h1_title",
+    "type": "STRING"
   }
 ]
