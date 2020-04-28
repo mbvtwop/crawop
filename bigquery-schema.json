@@ -58,5 +58,10 @@
     "description": "Title H1.",
     "name": "h1_title",
     "type": "STRING"
+  },
+  {
+    "description": "Balise canonicale.",
+    "name": "canonical_tag",
+    "type": "STRING"
   }
 ]
