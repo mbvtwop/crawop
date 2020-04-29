@@ -4,7 +4,7 @@
   "projectId": "crawlergcp",
   "bigQuery": {
     "datasetId": "woptimo_agence",
-    "tableId": "woptimo_agence_crawl_results"
+    "tableId": "cr_canonical_tag"
   },
   "redis": {
     "active": false,
