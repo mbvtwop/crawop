@@ -149,7 +149,7 @@ function evaluatePage() {
     twitterTitle: $('meta[name="twitter:title"]').attr('content'),
     nsGtm: document.querySelector('body > noscript').innerText,
     h1Title: document.getElementsByTagName("h1")[0].innerText,
-    canonicalTag: $('link[rel="canonical"]').attr('href')
+    canonicalTag: document.querySelector("link[rel='canonical']").href
   };
 }
 
