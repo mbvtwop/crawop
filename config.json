@@ -3,7 +3,7 @@
   "startUrl": "https://woptimo.com/agence-woptimo/",
   "projectId": "crawlergcp",
   "bigQuery": {
-    "datasetId": "woptimo_agence",
+    "datasetId": "woptimo_agence_v2",
     "tableId": "cr_canonical_tag"
   },
   "redis": {
